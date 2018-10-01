@@ -1,0 +1,35 @@
+80 squares
+
+4 colors, red, blue, green, purple
+
+3 locations (placed before 3/4th point of the map)
+
+random through array of location/color options
+this array is artificially inflated with more colors than locations
+
+1-3 computers
+taking turns, player has a "spin" button that takes their turn (spinning gif?)
+
+
+MOST IMPORTANT (in order)
+Movement
+Board
+Computer Players
+Visual Aspects
+Bells/Whistles
+
+
+span classes for each block (class = 'red'), id for locations/special effects
+
+
+class BlockOrder = {
+    1: 'red'
+    2: 'blue'
+    3: 'green'
+    4: 'purple'
+    5: 'red'
+}
+
+for loop i = (position of current block), iterate ++ until color is found
+
+player pos = num 0 through 80, corresponding to the divs on the Board
