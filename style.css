@@ -1,0 +1,96 @@
+.start {
+    height: 75px;
+    width: 75px;
+    border: 2px solid black;
+    vertical-align: bottom;
+    margin-bottom: 4px;
+    text-align: center;
+}
+
+.RED {
+    background-color: red;
+    height: 75px;
+    width: 75px;
+    border: 2px solid black;
+}
+
+.BLUE {
+    background-color: blue;
+    height: 75px;
+    width: 75px;
+    border: 2px solid black;
+}
+
+.GREEN {
+    background-color: green;
+    height: 75px;
+    width: 75px;
+    border: 2px solid black;
+}
+
+.PURPLE {
+    background-color: purple;
+    height: 75px;
+    width: 75px;
+    border: 2px solid black;
+}
+
+
+div {
+    display: inline-block;
+    border-radius: 12px;
+}
+
+#section_nine {
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 12px;
+}
+
+#section_eight {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 12px;
+}
+
+#section_seven {
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 12px;
+}
+
+#section_six {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 12px;
+}
+
+#section_five {
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 12px;
+}
+
+#section_four {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 12px;
+}
+
+#section_three {
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 12px;
+}
+
+#section_two {
+    float: right;
+    margin-right: 20%;
+    margin-bottom: 12px;
+}
+
+#section_one {
+    float: left;
+    margin-left: 20%;
+    margin-bottom: 12px;
+}
