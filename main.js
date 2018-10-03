@@ -1,9 +1,5 @@
 let gameover = false,
     playerWin = false,
-    // player1Pos = 0,
-    // comp1Pos = 0,
-    // comp2Pos = 0,
-    // comp3Pos = 0,
     currentPlayer1Pos = 0,
     currentComp1Position = 0,
     currentComp2Position = 0,
@@ -72,6 +68,10 @@ function updatePlayerPosition() {
 
     document.getElementById(currentPlayer1Pos).classList.add("playerClass");
 
+    if (currentPlayer1Pos >= 80) {
+        playerWin = true;
+    }
+
 }
 
 function updateComputerPosition() {
@@ -95,7 +95,6 @@ function updateComputerPosition() {
     } while (boardCheck1 != comp1Spin);
 
     document.getElementById(currentComp1Position).classList.add("comp1Class");
-    // while loop, color == somecolor, increment current position
 
     //COMP 2 LOOP
     document.getElementById(currentComp2Position).classList.remove("comp2Class");
@@ -122,7 +121,7 @@ function updateComputerPosition() {
     document.getElementById(currentComp3Position).classList.add("comp3Class");
 
     if (currentComp1Position >= 80 || currentComp2Position >= 80 || currentComp3Position >= 80) {
-        return gameover = true
+        gameover = true;
     }
 
 
