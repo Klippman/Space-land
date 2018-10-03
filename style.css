@@ -188,3 +188,37 @@ div {
     content: url(droid3.png);
 
 }
+
+
+/* Side Bar */
+#sideBar {
+    height: 700px;
+    width: 200px;
+    background: red;
+    position: fixed;
+    right: 70px;
+    top: 100px;
+    text-align: center;
+    border: 4px solid white
+}
+
+.buttons {
+    margin: 20px auto;
+    display: block;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 10px 10px 10px;
+
+}
+
+#playerWrap {
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.players {
+    color: white;
+}
