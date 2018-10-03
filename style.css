@@ -167,35 +167,24 @@ div {
 }
 
 /* PLAYER/CPU TOKENS */
-#playerClass {
-    content: url('/images/player1.png');
-    grid-row-start: 1;
-    grid-column-start: 1;
-    width: 25px;
-    height: 25px;
+
+.playerClass{
+    content: url(player1.png);
 
 }
 
-#comp1Class {
-    content: url('/images/comp1.png');
-    grid-row-start: 1;
-    grid-column-start: 2;
-    width: 25px;
-    height: 25px;
+
+.comp1Class {
+    content: url(droid1.png);
+
 }
 
-#comp2Class {
-    content: url('/images/comp2.png');
-    grid-row-start: 2;
-    grid-column-start: 1;
-    width: 25px;
-    height: 25px;
+.comp2Class {
+    content: url(droid2.png);
+
 }
 
-#comp3Class {
-    content: url('/images/comp3.png');
-    grid-row-start: 2;
-    grid-column-start: 2;
-    width: 25px;
-    height: 25px;
+.comp3Class {
+    content: url(droid3.png);
+
 }
