@@ -127,3 +127,14 @@ function updateComputerPosition() {
 
 }
 
+if(gameover == true){
+    document.getElementById(MODALNAME).style.display = "block"
+
+
+}
+if(playerWin == true){
+    document.getElementById(MODALNAME).style.display = "block"
+
+
+}
+
