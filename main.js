@@ -1,6 +1,5 @@
-let gameover = false
 
-let boardSpaces = {
+const boardSpaces = {
     0: 'START', 1: 'RED', 2: 'BLUE', 3: 'GREEN', 4: 'PURPLE', 5: 'RED',
     6: 'BLUE', 7: 'GREEN', 8: 'PURPLE', 9: 'RED', 10: 'BLUE', 11: 'GREEN',
     12: 'PURPLE', 13: 'RED', 14: 'BLUE', 15: 'GREEN', 16: 'PURPLE',
@@ -19,3 +18,114 @@ let boardSpaces = {
     77: 'RED', 78: 'BLUE', 79: 'GREEN', 80: 'PURPLE'
 }
 
+const spinnerOptions = [
+    'RED', 'RED', 'RED', 'RED', 'RED', 'RED', 'RED', 'RED', 'RED',
+    'BLUE', 'BLUE', 'BLUE', 'BLUE', 'BLUE', 'BLUE', 'BLUE', 'BLUE', 
+    'GREEN', 'GREEN', 'GREEN', 'GREEN', 'GREEN', 'GREEN', 'GREEN', 'GREEN', 
+    'PURPLE', 'PURPLE', 'PURPLE', 'PURPLE', 'PURPLE', 'PURPLE', 'PURPLE', 'PURPLE', 
+    // 'PARK', 'HOTH'
+]
+
+
+while(gameover = false){
+    function gameStart(){
+        player1Pos = 0
+        comp1Pos = 0
+        comp2Pos = 0
+        comp3Pos = 0
+
+        document.getElementById(player1Pos.toString()).classList.add("playerClass");
+        document.getElementById(comp1Pos.toString()).classList.add("comp1Class");
+        document.getElementById(comp2Pos.toString()).classList.add("comp2Class");
+        document.getElementById(comp3Pos.toString()).classList.add("comp3Class");
+
+        function spinToWin(){
+
+            currentPlayer1Pos = ""
+            currentComp1Position = ""
+            currentComp2Position = ""
+            currentComp3Position = ""
+
+            document.getElementById(player1Pos.toString()).classList.remove("playerClass");
+            document.getElementById(comp1Pos.toString()).classList.remove("comp1Class");
+            document.getElementById(comp2Pos.toString()).classList.remove("comp2Class");
+            document.getElementById(comp3Pos.toString()).classList.remove("comp3Class");
+
+            function updatePlayerPosition(){
+                if(!currentPlayer1Pos) currentPlayer1Pos = 0;
+
+                let playerSpin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+
+                let boardCheckP = boardSpaces[currentPlayer1Pos];
+
+                do {
+                    let boardCheckP = boardSpaces[currentPlayer1Pos]
+                    currentPlayer1Pos ++             
+                } while (boardCheckP != playerSpin);
+
+
+            }
+
+            function updateComputerPosition(){
+
+                if(currentComp1Position == "") currentComp1Position = 0;
+                if(!currentComp2Position) currentComp2Position = 0;
+                if(!currentComp3Position) currentComp3Position = 0;
+
+                let comp1Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+                let comp2Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+                let comp3Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+
+                //COMP 1 LOOP
+                document.getElementById(currentComp1Position).classList.remove("comp1Class");
+
+                let boardCheck1 = boardSpaces[currentComp1Position]
+
+                do {
+                    let boardCheck1 = boardSpaces[currentComp1Position]
+                    currentComp1Position ++             
+                } while (boardCheck1 != comp1Spin);
+                    
+                document.getElementById(currentComp1Position).classList.add("comp1Class");
+                // while loop, color == somecolor, increment current position
+
+                //COMP 2 LOOP
+                document.getElementById(currentComp2Position).classList.remove("comp2Class");
+
+                let boardCheck2 = boardSpaces[currentComp2Position]
+
+                do {
+                    let boardCheck2 = boardSpaces[currentComp2Position]
+                    currentComp2Position ++             
+                } while (boardCheck2 != comp2Spin);
+                    
+                document.getElementById(currentComp2Position).classList.add("comp2Class");
+
+                //COMP 3 LOOP
+                document.getElementById(currentComp3Position).classList.remove("comp3Class");
+
+                let boardCheck3 = boardSpaces[currentComp3Position]
+
+                do {
+                    let boardCheck3 = boardSpaces[currentComp3Position]
+                    currentComp3Position ++             
+                } while (boardCheck3 != comp3Spin);
+                    
+                document.getElementById(currentComp3Position).classList.add("comp3Class");
+
+                if(currentComp1Position >= 80 || currentComp2Position >= 80 || currentComp3Position >= 80){
+                    return gameover=true
+                }
+
+
+            }
+            updatePlayerPosition();
+            updateComputerPosition();
+
+        }
+        spinToWin();
+
+    }
+
+    gameStart();
+}

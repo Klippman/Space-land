@@ -165,3 +165,37 @@ div {
     right: 275px;
     transform: rotate(55deg);
 }
+
+/* PLAYER/CPU TOKENS */
+#playerClass {
+    content: url('/images/player1.png');
+    grid-row-start: 1;
+    grid-column-start: 1;
+    width: 25px;
+    height: 25px;
+
+}
+
+#comp1Class {
+    content: url('/images/comp1.png');
+    grid-row-start: 1;
+    grid-column-start: 2;
+    width: 25px;
+    height: 25px;
+}
+
+#comp2Class {
+    content: url('/images/comp2.png');
+    grid-row-start: 2;
+    grid-column-start: 1;
+    width: 25px;
+    height: 25px;
+}
+
+#comp3Class {
+    content: url('/images/comp3.png');
+    grid-row-start: 2;
+    grid-column-start: 2;
+    width: 25px;
+    height: 25px;
+}
