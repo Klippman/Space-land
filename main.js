@@ -5,6 +5,8 @@ let gameover = false,
     currentComp2Position = 0,
     currentComp3Position = 0
 
+
+
 const boardSpaces = {
     0: 'START', 1: 'RED', 2: 'BLUE', 3: 'GREEN', 4: 'PURPLE', 5: 'RED',
     6: 'BLUE', 7: 'GREEN', 8: 'PURPLE', 9: 'RED', 10: 'BLUE', 11: 'GREEN',
@@ -195,3 +197,6 @@ increaseSize6.addEventListener("click", function(){
 });
 
 
+window.onload = function(){
+    alert("Welcome to Space Wars CandyLand, it's like regular candlyland, but in space and please don't cease and desist us Disney")
+}
