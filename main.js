@@ -21,7 +21,8 @@ const boardSpaces = {
     62: 'BLUE', 63: 'GREEN', 64: 'PURPLE', 65: 'RED', 66: 'BLUE',
     67: 'GREEN', 68: 'PURPLE', 69: 'RED', 70: 'BLUE', 71: 'GREEN',
     72: 'PURPLE', 73: 'RED', 74: 'BLUE', 75: 'GREEN', 76: 'PURPLE',
-    77: 'RED', 78: 'BLUE', 79: 'GREEN', 80: 'PURPLE'
+    77: 'RED', 78: 'BLUE', 79: 'GREEN', 80: 'PURPLE', 81: 'RED',
+    82: 'BLUE', 83: 'GREEN', 84: 'PURPLE'
 }
 
 const spinnerOptions = [
@@ -40,101 +41,44 @@ function gameStart() {
     document.getElementById(currentComp1Position.toString()).classList.add("comp1Class");
     document.getElementById(currentComp2Position.toString()).classList.add("comp2Class");
     document.getElementById(currentComp3Position.toString()).classList.add("comp3Class");
-
-    function spinToWin() {
-
-
-        updatePlayerPosition();
-        updateComputerPosition();
-
-    }
-
-    document.getElementById('spin').onclick = spinToWin;
-
 }
 
-function updatePlayerPosition() {
-    // if(!currentPlayer1Pos) currentPlayer1Pos = 0;
-    document.getElementById(currentPlayer1Pos).classList.remove("playerClass");
+function spinToWin() {
 
-    let playerSpin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+    currentPlayer1Pos = updatePos(currentPlayer1Pos, "playerClass");
+    currentComp1Position = updatePos(currentComp1Position, "comp1Class");
+    currentComp2Position = updatePos(currentComp2Position, "comp2Class");
+    currentComp3Position = updatePos(currentComp3Position, "comp3Class");
 
-    let boardCheckP = "";
-
-    do {
-        boardCheckP = boardSpaces[currentPlayer1Pos]
-        currentPlayer1Pos++
-    } while (boardCheckP != playerSpin);
-
-    document.getElementById(currentPlayer1Pos).classList.add("playerClass");
-
-    if (currentPlayer1Pos >= 80) {
-        playerWin = true;
+    if(currentComp1Position >= 80 || currentComp2Position >= 80 || currentComp3Position >= 80){
+        alert('You are the loser, congratulations!')
+        return location.reload();
+    }
+    if(currentPlayer1Pos >= 80){
+        alert('You are the winner, congratulations!')
+        return location.reload();
     }
 
 }
 
-function updateComputerPosition() {
+document.getElementById('spin').onclick = spinToWin;
 
-    // if(currentComp1Position == "") currentComp1Position = 0;
-    // if(currentComp2Position == "") currentComp2Position = 0;
-    // if(currentComp3Position == "") currentComp3Position = 0;
+function updatePos(player, divClass){
 
-    let comp1Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
-    let comp2Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
-    let comp3Spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
+    let spin = spinnerOptions[Math.floor(Math.random() * spinnerOptions.length)];
 
-    //COMP 1 LOOP
-    document.getElementById(currentComp1Position).classList.remove("comp1Class");
+    document.getElementById(player.toString()).classList.remove(divClass);
 
-    let boardCheck1 = ""
+    let boardCheck = ""
 
-    do {
-        boardCheck1 = boardSpaces[currentComp1Position]
-        currentComp1Position++
-    } while (boardCheck1 != comp1Spin);
+    do{
+        player++
+        boardCheck = boardSpaces[player]
+    } while (boardCheck != spin);
 
-    document.getElementById(currentComp1Position).classList.add("comp1Class");
+    document.getElementById(player.toString()).classList.add(divClass);
 
-    //COMP 2 LOOP
-    document.getElementById(currentComp2Position).classList.remove("comp2Class");
-
-    let boardCheck2 = ""
-
-    do {
-        boardCheck2 = boardSpaces[currentComp2Position]
-        currentComp2Position++
-    } while (boardCheck2 != comp2Spin);
-
-    document.getElementById(currentComp2Position).classList.add("comp2Class");
-
-    //COMP 3 LOOP
-    document.getElementById(currentComp3Position).classList.remove("comp3Class");
-
-    let boardCheck3 = ""
-
-    do {
-        boardCheck3 = boardSpaces[currentComp3Position]
-        currentComp3Position++
-    } while (boardCheck3 != comp3Spin);
-
-    document.getElementById(currentComp3Position).classList.add("comp3Class");
-
-    if (currentComp1Position >= 80 || currentComp2Position >= 80 || currentComp3Position >= 80) {
-        gameover = true;
-    }
-
-
+    return player;
 }
 
-if(gameover == true){
-    document.getElementById(MODALNAME).style.display = "block"
-
-
-}
-if(playerWin == true){
-    document.getElementById(MODALNAME).style.display = "block"
-
-
-}
 

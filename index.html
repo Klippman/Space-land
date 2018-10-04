@@ -8,8 +8,24 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body background="images/hyperspace.jpg">
-    <button id="gameStart">START</button>
-    <button id="spin">Take Your Turn</button>
+
+    <div id="sideBar">
+        <button id="gameStart" class="buttons">START</button>
+        <button id="spin" class="buttons">Take Your Turn</button>
+        <div id="playerWrap">
+            <p class="players">Player 1</p>
+            <img src="player1.png" alt="">
+
+            <p class="players">Computer 1</p>
+            <img src="droid1.png" alt="">
+
+            <p class="players">Computer 2</p>
+            <img src="droid2.png" alt="">
+
+            <p class="players">Computer 3</p>
+            <img src="droid3.png" alt="">
+        </div>
+    </div>
 
     <div>
         <img id="storm_trooper" src="images/storm_trooper.png">
@@ -19,6 +35,8 @@
         <img id="yoda" src="images/yoda.png">
         <img id="chewy" src="images/chewy.png">
     </div>
+
+<div id="boardWrapper">
 
     <div id="section_nine">
         <div id="72" class="PURPLE"></div>
@@ -143,6 +161,13 @@
         <div id="7" class="GREEN"></div>
         <div id="8" class="PURPLE"></div> 
     </div>
+
+</div>
+
+    <div id='81' class="hideMe"></div>
+    <div id='82' class="hideMe"></div>
+    <div id='83' class="hideMe"></div>
+    <div id='84' class="hideMe"></div>
     <script src='main.js'></script>
 
     <!-- <script src = 'style.js'></script> -->
