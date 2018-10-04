@@ -5,6 +5,10 @@ body {
 }
 
 /* game path */
+#boardWrapper{
+    width: 80%;
+    margin-left: 10%;
+}
 
 .start {
     height: 75px;
@@ -105,6 +109,10 @@ div {
     margin-bottom: 30px;
 }
 
+.hideMe {
+    display: none;
+}
+
 /* character images on both sides of game board */
 
 #storm_trooper {
@@ -166,36 +174,56 @@ div {
     transform: rotate(55deg);
 }
 
-/* PLAYER/CPU TOKENS */
-#playerClass {
-    content: url('/images/player1.png');
-    grid-row-start: 1;
-    grid-column-start: 1;
-    width: 25px;
-    height: 25px;
+.playerClass{
+    content: url(player1.png);
 
 }
 
-#comp1Class {
-    content: url('/images/comp1.png');
-    grid-row-start: 1;
-    grid-column-start: 2;
-    width: 25px;
-    height: 25px;
+
+.comp1Class {
+    content: url(droid1.png);
+
 }
 
-#comp2Class {
-    content: url('/images/comp2.png');
-    grid-row-start: 2;
-    grid-column-start: 1;
-    width: 25px;
-    height: 25px;
+.comp2Class {
+    content: url(droid2.png);
+
 }
 
-#comp3Class {
-    content: url('/images/comp3.png');
-    grid-row-start: 2;
-    grid-column-start: 2;
-    width: 25px;
-    height: 25px;
+.comp3Class {
+    content: url(droid3.png);
+
+}
+
+/* Side Bar */
+#sideBar {
+    height: 700px;
+    width: 200px;
+    background: red;
+    position: fixed;
+    right: 70px;
+    top: 80px;
+    text-align: center;
+    border: 4px solid white
+}
+
+.buttons {
+    margin: 20px auto;
+    display: block;
+    border: 2px solid white;
+    border-radius: 10px;
+    background: none;
+    color: white;
+    font-size: 18px;
+    padding: 15px 10px 10px 10px;
+
+}
+
+#playerWrap {
+    border: 2px solid white;
+    padding: 20px;
+}
+
+.players {
+    color: white;
 }
