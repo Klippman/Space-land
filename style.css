@@ -1,7 +1,7 @@
 /* background cover */
 
 body {
-    background-size: cover;
+    /* background-size: cover; */
 }
 
 /* game path */
@@ -173,8 +173,6 @@ div {
     right: 275px;
     transform: rotate(55deg);
 }
-
-/* PLAYER/CPU TOKENS */
 
 .playerClass{
     content: url(player1.png);

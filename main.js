@@ -81,4 +81,117 @@ function updatePos(player, divClass){
     return player;
 }
 
+// hover animation for characters //
+
+var increaseSize = document.getElementById("storm_trooper");
+increaseSize.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+var increaseSize2 = document.getElementById("r2");
+increaseSize2.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+var increaseSize3 = document.getElementById("vader");
+increaseSize3.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+var increaseSize4 = document.getElementById("c3");
+increaseSize4.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+var increaseSize5 = document.getElementById("yoda");
+increaseSize5.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+var increaseSize6 = document.getElementById("chewy");
+increaseSize6.addEventListener("mouseover", function(event){
+    event.target.style.height = "300px";
+    event.target.style.width = "300px";
+    event.target.style.zIndex = "0";
+
+setTimeout(function(){
+    event.target.style.height = "150px";
+    event.target.style.width = "150px";
+    event.target.style.zIndex = "-1";
+}, 600);
+}, false);
+
+// audio for characters //
+
+var stormTrooper = document.getElementById("trooper_clip");
+increaseSize.addEventListener("click", function(){
+    stormTrooper.play();
+});
+
+
+var r2 = document.getElementById("r2d2_clip");
+increaseSize2.addEventListener("click", function(){
+    r2.play();
+});
+
+var vader = document.getElementById("vader_clip");
+increaseSize3.addEventListener("click", function(){
+    vader.play();
+});
+
+var c3 = document.getElementById("c3_clip");
+increaseSize4.addEventListener("click", function(){
+    c3.play();
+});
+
+var yoda = document.getElementById("yoda_clip");
+increaseSize5.addEventListener("click", function(){
+    yoda.play();
+});
+
+var chewy = document.getElementById("chewy_clip");
+increaseSize6.addEventListener("click", function(){
+    chewy.play();
+});
+
 
