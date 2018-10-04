@@ -33,3 +33,7 @@ class BlockOrder = {
 for loop i = (position of current block), iterate ++ until color is found
 
 player pos = num 0 through 80, corresponding to the divs on the Board
+
+x = document.getElementByClassName('box')
+player position: 
+
